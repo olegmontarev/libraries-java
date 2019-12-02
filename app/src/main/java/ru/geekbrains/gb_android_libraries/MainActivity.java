@@ -1,15 +1,15 @@
 package ru.geekbrains.gb_android_libraries;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
+        import android.os.Bundle;
+        import android.support.v7.app.AppCompatActivity;
+        import android.widget.Button;
 
-import com.arellomobile.mvp.MvpAppCompatActivity;
-import com.arellomobile.mvp.presenter.InjectPresenter;
+        import com.arellomobile.mvp.MvpAppCompatActivity;
+        import com.arellomobile.mvp.presenter.InjectPresenter;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+        import butterknife.BindView;
+        import butterknife.ButterKnife;
+        import butterknife.OnClick;
 
 public class MainActivity extends MvpAppCompatActivity implements MainView {
 
@@ -32,9 +32,19 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btnCounter1, R.id.btnCounter2, R.id.btnCounter3})
-    public void onButtonClick(Button button) {
-        presenter.counterClick(button.getId());
+    @OnClick(R.id.btnCounter1)
+    public void onButtonClick1(Button button) {
+        presenter.counterClick1();
+    }
+
+    @OnClick(R.id.btnCounter2)
+    public void onButtonClick2(Button button) {
+        presenter.counterClick2();
+    }
+
+    @OnClick(R.id.btnCounter3)
+    public void onButtonClick3(Button button) {
+        presenter.counterClick3();
     }
 
     @Override
