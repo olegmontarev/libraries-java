@@ -20,17 +20,15 @@ public class MainPresenter extends MvpPresenter<MainView> {
         return model.getAt(index);
     }
 
-    public void counterClick(int id){
-        switch (id) {
-            case R.id.btnCounter1:
-                getViewState().setButtonText(0, calcValue(0));
-                break;
-            case R.id.btnCounter2:
-                getViewState().setButtonText(1, calcValue(1));
-                break;
-            case R.id.btnCounter3:
-                getViewState().setButtonText(2, calcValue(2));
-                break;
-        }
+    public void counterClick1(){
+        getViewState().setButtonText(0, calcValue(0));
+    }
+
+    public void counterClick2(){
+        getViewState().setButtonText(1, calcValue(1));
+    }
+
+    public void counterClick3(){
+        getViewState().setButtonText(2, calcValue(2));
     }
 }
